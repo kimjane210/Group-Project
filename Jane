@@ -1,0 +1,19 @@
+# Group Program 
+
+from textblob import TextBlob
+
+source = open('desktop/pride.txt')
+
+pride = source.read()
+
+prideblob = TextBlob(pride)
+
+prideblob.tokens
+
+def chapters(prideblob):
+    count = 0
+    for (token) in prideblob.tokens:
+        if token == 'CHAPTER':
+            count = count + 1
+    print count
+float(len (prideblob.words))/ 20
